@@ -41,7 +41,7 @@ class PostScraper(threading.Thread):
 			'categories': categories
 		}
 		with open(OUTFILE, 'a') as outfile:
-			outfile.write(str(item) + '\n')
+			outfile.write(json.dumps(item) + '\n')
 
 
 class ListScraper(threading.Thread):
